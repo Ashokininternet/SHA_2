@@ -17,6 +17,7 @@ int main(int argc, char *argv[]) {
   EVP_DigestUpdate(ctx, value, strlen(value));
   EVP_DigestFinal(ctx, buff, &buff_len);
 
+  printf("The hash is: ");
   for (int i = 0; i < buff_len; i++) {
     printf("%02x", buff[i]);
   }
